@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+}
+
+.image-container {
+    position: relative;
+    z-index: 0;
+}
+
+.background-image {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.svg-container {
+    position: absolute;
+    top: 50.6%;
+    width: 1245px;
+    left: 51.5%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+svg {
+    width: 1200px;
+    height: auto;
+}
+
+.glow {
+    animation: borderGlow 3s infinite alternate;
+    filter: url(#glow-filter);
+}
+
+@keyframes borderGlow {
+    0% {
+        stroke: #ffffff;
+        stroke-width: 0;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+    25% {
+        stroke: #ffffff;
+        stroke-width: 1;
+        filter: drop-shadow(0 0 20px rgba(24, 255, 255, 0.75));
+    }
+    50% {
+        stroke: #ffffff;
+        stroke-width: 2;
+        filter: drop-shadow(0 0 30px rgba(24, 255, 255, 0.75));
+    }
+    75% {
+        stroke: #ffffff;
+        stroke-width: 3;
+        filter: drop-shadow(0 0 40px rgba(24, 255, 255, 0.75));
+    }
+    100% {
+        stroke: #ffffff;
+        stroke-width: 3.5;
+        filter: drop-shadow(0 0 50px rgba(58, 98, 163, 0.5));
+    }
+}
